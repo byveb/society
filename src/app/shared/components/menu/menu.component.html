@@ -1,16 +1,18 @@
 <ul class="list-items-main list-items">
-    <ng-container *ngFor="let item of listItems; let i = index">
+    <ng-container *ngFor="let item of items; let i = index">
 
-        <li class="item has-nested-item item-closed" *ngIf="item.items;else nestedItems">
+        <li class="item has-nested-item" [ngClass]="(item.isSelected ? 'item-opened' : 'item-closed')"
+            *ngIf="item.items;else nestedItems">
             <a pButton pRipple class="p-button-text item-link" role="button" (click)="openClose($event, i)">
                 <span class="s-icon"><i [classList]="item.icon.name"></i></span>
                 <span [innerText]="item.label" class="item-title"></span>
-                <span class="s-icon-openclose"><i class="pi pi-angle-down"></i></span>
+                <span class="s-icon-openclose mx-2"><i class="pi"
+                        [ngClass]="(item.isSelected ? 'pi-angle-up' : 'pi-angle-down')"></i></span>
             </a>
             <ul class="list-items sublist-items">
                 <li class="sub-item" *ngFor="let subitem of item.items">
-                    <a [routerLink]="subitem.href" class="sub-item-link" (isActiveChange)="onLoadLinkActived($event)"
-                        routerLinkActive="active" (click)="activeSelectedParentElement($event, '.item')">
+                    <a [routerLink]="subitem.href" class="sub-item-link"
+                        (isActiveChange)="onLoadAutoSelecteMenu($event, i)" routerLinkActive="active">
                         <span [innerText]="subitem.label" class="item-title"></span>
                     </a>
                 </li>
@@ -19,8 +21,8 @@
 
         <ng-template #nestedItems>
             <li class="item">
-                <a pButton pRipple [routerLink]="item.href" (click)="removeAllActiveClass()" routerLinkActive="active"
-                    (isActiveChange)="onLoadLinkActived($event)" class="p-button-text item-link" role="link">
+                <a pButton pRipple [routerLink]="item.href" routerLinkActive="active"
+                    (isActiveChange)="onLoadAutoSelecteMenu($event, i)" class="p-button-text item-link" role="link">
                     <span class="s-icon"><i [classList]="item.icon.name"></i></span>
                     <span [innerText]="item.label" class="item-title"></span>
                 </a>

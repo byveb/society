@@ -55,14 +55,14 @@
                         "label": "Properties",
                         "hideIcon": true,
                         "hideLabel": false,
-                        "href": "properties"
+                        "href": "properties/all"
                     },
                     {
                         "type": "link",
                         "label": "Units",
                         "hideIcon": true,
                         "hideLabel": false,
-                        "href": "units"
+                        "href": "properties/units"
                     }
                 ]
             },
@@ -81,21 +81,21 @@
                         "label": "Transactions",
                         "hideIcon": true,
                         "hideLabel": false,
-                        "href": "transactions"
+                        "href": "accounting/transactions"
                     },
                     {
                         "type": "link",
                         "label": "Balances",
                         "hideIcon": true,
                         "hideLabel": false,
-                        "href": "balances"
+                        "href": "accounting/balances"
                     },
                     {
                         "type": "link",
                         "label": "Recurring",
                         "hideIcon": true,
                         "hideLabel": false,
-                        "href": "recurring"
+                        "href": "accounting/recurring"
                     }
                 ]
             },
@@ -114,14 +114,14 @@
                         "label": "Tenants",
                         "hideIcon": true,
                         "hideLabel": false,
-                        "href": "tenants"
+                        "href": "contacts/tenants"
                     },
                     {
                         "type": "link",
                         "label": "Services",
                         "hideIcon": true,
                         "hideLabel": false,
-                        "href": "services"
+                        "href": "contacts/services"
                     }
                 ]
             },
@@ -151,14 +151,14 @@
                         "label": "Requests",
                         "hideIcon": true,
                         "hideLabel": false,
-                        "href": "requests"
+                        "href": "maintenance/requests"
                     },
                     {
                         "type": "link",
                         "label": "Reminders",
                         "hideIcon": true,
                         "hideLabel": false,
-                        "href": "reminders"
+                        "href": "maintenance/reminders"
                     }
                 ]
             },
@@ -170,7 +170,8 @@
                     "name": "pi pi-id-card"
                 },
                 "hideIcon": false,
-                "hideLabel": false                
+                "hideLabel": false,
+                "href": "staffs"
             },
             {
                 "type": "panelmenu",
@@ -187,14 +188,14 @@
                         "label": "Listings",
                         "hideIcon": true,
                         "hideLabel": false,
-                        "href": "listings"
+                        "href": "property/listings"
                     },
                     {
                         "type": "link",
                         "label": "Inquiries",
                         "hideIcon": true,
                         "hideLabel": false,
-                        "href": "inquiries"
+                        "href": "property/inquiries"
                     }
                 ]
             }

@@ -1,8 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
-@import url("assets/colors.scss");
-@import url("assets/variables.scss");
-@import url("assets/theme.scss");
-@import url("assets/site.scss");
+@import url("scss/colors.scss");
+@import url("scss/variables.scss");
+@import url("scss/theme.scss");
+@import url("scss/site.scss");
 
 html {
     height: 100%;
@@ -64,6 +64,9 @@ society-sidebar {
     }
     & .list-items {
         & .item {
+            & .sublist-items {
+                display: none;
+            }
             & .item-link,
             & .sub-item-link {
                 & .item-title {
@@ -129,6 +132,7 @@ society-sidebar {
     position: relative;
     backface-visibility: hidden;
     & .item {
+        margin-bottom: 0.5rem;
         &.item-closed .sublist-items {
             display: none;
         }
@@ -144,6 +148,7 @@ society-sidebar {
                 color: #7254f3;
             }
         }
+        &.active-list > a.item-link,
         &.active > [role="button"] {
             color: #7254f3;
         }
@@ -184,6 +189,11 @@ society-sidebar {
     & .p-button:focus {
         box-shadow: none;
     }
+}
+
+.list-items .item:hover a.item-link,
+.list-items .item.active-list a.item-link {
+    background-color: #eeeaff;
 }
 
 .cust-badge,
