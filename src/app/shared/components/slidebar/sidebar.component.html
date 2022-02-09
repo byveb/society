@@ -1,0 +1,26 @@
+<div class="sidebar-container">
+    <div class="sidebar-header">
+        <div class="logo-content">
+            <span class="logo-text">S<span class="logo-text-second">ociety</span></span>
+            <span class="logo-subtext font-xsm">.limited</span>
+            <span class="logo-subtext hidden">People .Secure .Happiness</span>
+        </div>
+    </div>
+    <div class="sidebar-content">
+        <div class="loggedin-user boder-block-tb">
+            <p-avatar icon="pi pi-user" styleClass="mr-1" shape="circle"></p-avatar>
+            <span class="loggedin-info">
+                <span class="loggedin-name">Administrator</span>
+                <span class="loggedin-role">Landlord</span>
+            </span>
+        </div>
+        <div class="sidebar-menus">
+            <p-scrollPanel [style]="{width: '100%', height: 'calc(100vh - 150px)'}">
+                <div class="menu-title uppercase">Menu</div>
+                <div class="menus-list list-main">
+                    <society-menu [listItems]="sideBar.menus"></society-menu>
+                </div>
+            </p-scrollPanel>
+        </div>
+    </div>
+</div>

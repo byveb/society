@@ -1,0 +1,12 @@
+<div class="wrapper-main" [ngClass]="isOpen ? 'bar-expanded' : 'bar-collapsed'">
+    <society-sidebar class="sidebar-fixed sidebar-partial_close sidebar-left_bottom" [sideBar]="sidebar"
+        [(isVisible)]="isOpen"></society-sidebar>
+    <div class="wrapper-container">
+        <society-header class="mb-1" [(barToggel)]="isOpen"></society-header>
+        <div class="wrapper-content bg-default">
+            <society-breadcrumb class="px-4 py-2"></society-breadcrumb>
+            <router-outlet></router-outlet>
+        </div>
+        <society-footer></society-footer>
+    </div>
+</div>

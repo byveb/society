@@ -1,0 +1,40 @@
+<ul class="list-items-main list-items">
+    <ng-container *ngFor="let item of listItems; let i = index">
+
+        <li class="item has-nested-item item-closed" *ngIf="item.items;else nestedItems">
+            <a pButton pRipple class="p-button-text item-link" role="button" (click)="openClose($event, i)">
+                <span class="s-icon"><i [classList]="item.icon.name"></i></span>
+                <span [innerText]="item.label" class="item-title"></span>
+                <span class="s-icon-openclose"><i class="pi pi-angle-down"></i></span>
+            </a>
+            <ul class="list-items sublist-items">
+                <li class="sub-item" *ngFor="let subitem of item.items">
+                    <a [routerLink]="subitem.href" class="sub-item-link" (isActiveChange)="onLoadLinkActived($event)"
+                        routerLinkActive="active" (click)="activeSelectedParentElement($event, '.item')">
+                        <span [innerText]="subitem.label" class="item-title"></span>
+                    </a>
+                </li>
+            </ul>
+        </li>
+
+        <ng-template #nestedItems>
+            <li class="item">
+                <a pButton pRipple [routerLink]="item.href" (click)="removeAllActiveClass()" routerLinkActive="active"
+                    (isActiveChange)="onLoadLinkActived($event)" class="p-button-text item-link" role="link">
+                    <span class="s-icon"><i [classList]="item.icon.name"></i></span>
+                    <span [innerText]="item.label" class="item-title"></span>
+                </a>
+            </li>
+        </ng-template>
+
+    </ng-container>
+
+    <li class="item mt-3">
+        <p-divider styleClass="m-1"></p-divider>
+        <a pButton pRipple routerLink="support" routerLinkActive="active" class="p-button-text item-link" role="link">
+            <span class="s-icon"><i class="pi pi-phone"></i></span>
+            <span class="item-title">Customer Support</span>
+        </a>
+        <p-divider styleClass="m-1"></p-divider>
+    </li>
+</ul>

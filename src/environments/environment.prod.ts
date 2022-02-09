@@ -1,3 +1,6 @@
 export const environment = {
-  production: true
+  test: false,
+  production: true,
+  appName: "Society",
+  localStoreName: "SDB-"
 };

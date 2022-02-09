@@ -1,0 +1,49 @@
+{
+    "data": {
+        "version": "0.0.1",
+        "links": [
+            {
+                "page": "all",
+                "name": "profile",
+                "component": "header",
+                "label": "Dashboard",
+                "type": "listdropdown",
+                "icon": {
+                    "type": "pi",
+                    "name": "pi pi-th-large"
+                },
+                "hideIcon": false,
+                "hideLabel": false,
+                "items": [
+                    {
+                        "type": "link",
+                        "label": "Dashboard",
+                        "icon": {
+                            "type": "pi",
+                            "name": "pi pi-th-large"
+                        },
+                        "hideIcon": false,
+                        "hideLabel": false,
+                        "href": "dashboard",
+                        "submenu": [
+                            {
+                                "type": "link",
+                                "label": "Properties",
+                                "hideIcon": true,
+                                "hideLabel": false,
+                                "href": "properties"
+                            },
+                            {
+                                "type": "link",
+                                "label": "Units",
+                                "hideIcon": true,
+                                "hideLabel": false,
+                                "href": "units"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}

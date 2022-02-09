@@ -1,0 +1,203 @@
+{
+    "data": {
+        "version": "0.0.1",
+        "header": {
+            "controls": [
+                {
+                    "align": "left",
+                    "type": "link",
+                    "label": "Calendar",
+                    "icon": {
+                        "type": "pi",
+                        "name": "pi pi-calendar"
+                    },
+                    "hideIcon": false,
+                    "hideLabel": true,
+                    "href": "calendar"
+                },
+                {
+                    "align": "right",
+                    "type": "button",
+                    "label": "Notifications",
+                    "icon": {
+                        "type": "pi",
+                        "name": "pi pi-bell"
+                    },
+                    "hideIcon": false,
+                    "hideLabel": true
+                }
+            ]
+        },
+        "menus": [
+            {
+                "type": "link",
+                "label": "Dashboard",
+                "icon": {
+                    "type": "pi",
+                    "name": "pi pi-th-large"
+                },
+                "hideIcon": false,
+                "hideLabel": false,
+                "href": "dashboard"
+            },
+            {
+                "type": "panelmenu",
+                "label": "Properties",
+                "icon": {
+                    "type": "pi",
+                    "name": "pi pi-home"
+                },
+                "hideIcon": false,
+                "hideLabel": false,
+                "items": [
+                    {
+                        "type": "link",
+                        "label": "Properties",
+                        "hideIcon": true,
+                        "hideLabel": false,
+                        "href": "properties"
+                    },
+                    {
+                        "type": "link",
+                        "label": "Units",
+                        "hideIcon": true,
+                        "hideLabel": false,
+                        "href": "units"
+                    }
+                ]
+            },
+            {
+                "type": "panelmenu",
+                "label": "Accounting",
+                "icon": {
+                    "type": "pi",
+                    "name": "pi pi-dollar"
+                },
+                "hideIcon": false,
+                "hideLabel": false,
+                "items": [
+                    {
+                        "type": "link",
+                        "label": "Transactions",
+                        "hideIcon": true,
+                        "hideLabel": false,
+                        "href": "transactions"
+                    },
+                    {
+                        "type": "link",
+                        "label": "Balances",
+                        "hideIcon": true,
+                        "hideLabel": false,
+                        "href": "balances"
+                    },
+                    {
+                        "type": "link",
+                        "label": "Recurring",
+                        "hideIcon": true,
+                        "hideLabel": false,
+                        "href": "recurring"
+                    }
+                ]
+            },
+            {
+                "type": "panelmenu",
+                "label": "Contacts",
+                "icon": {
+                    "type": "pi",
+                    "name": "pi pi-users"
+                },
+                "hideIcon": false,
+                "hideLabel": false,
+                "items": [
+                    {
+                        "type": "link",
+                        "label": "Tenants",
+                        "hideIcon": true,
+                        "hideLabel": false,
+                        "href": "tenants"
+                    },
+                    {
+                        "type": "link",
+                        "label": "Services",
+                        "hideIcon": true,
+                        "hideLabel": false,
+                        "href": "services"
+                    }
+                ]
+            },
+            {
+                "type": "panelmenu",
+                "label": "Reports",
+                "icon": {
+                    "type": "pi",
+                    "name": "pi pi-chart-pie"
+                },
+                "hideIcon": false,
+                "hideLabel": false,
+                "href": "reports"
+            },
+            {
+                "type": "panelmenu",
+                "label": "Maintenance",
+                "icon": {
+                    "type": "pi",
+                    "name": "pi pi-exclamation-triangle"
+                },
+                "hideIcon": false,
+                "hideLabel": false,
+                "items": [
+                    {
+                        "type": "link",
+                        "label": "Requests",
+                        "hideIcon": true,
+                        "hideLabel": false,
+                        "href": "requests"
+                    },
+                    {
+                        "type": "link",
+                        "label": "Reminders",
+                        "hideIcon": true,
+                        "hideLabel": false,
+                        "href": "reminders"
+                    }
+                ]
+            },
+            {
+                "type": "panelmenu",
+                "label": "Staffs",
+                "icon": {
+                    "type": "pi",
+                    "name": "pi pi-id-card"
+                },
+                "hideIcon": false,
+                "hideLabel": false                
+            },
+            {
+                "type": "panelmenu",
+                "label": "Listings",
+                "icon": {
+                    "type": "pi",
+                    "name": "pi pi-building"
+                },
+                "hideIcon": false,
+                "hideLabel": false,
+                "items": [
+                    {
+                        "type": "link",
+                        "label": "Listings",
+                        "hideIcon": true,
+                        "hideLabel": false,
+                        "href": "listings"
+                    },
+                    {
+                        "type": "link",
+                        "label": "Inquiries",
+                        "hideIcon": true,
+                        "hideLabel": false,
+                        "href": "inquiries"
+                    }
+                ]
+            }
+        ]
+    }
+}
