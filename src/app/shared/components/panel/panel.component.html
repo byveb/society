@@ -1,1 +1,17 @@
-<p>panel works!</p>
+<p-panel [toggleable]="toggleable" [styleClass]="styleClass" [style]="style">
+    <ng-template *ngIf="header" pTemplate="header">
+        <ng-content spellcheck="true" select="[header]">
+            
+        </ng-content>
+    </ng-template>
+    <ng-template pTemplate="content">
+        <ng-content spellcheck="true" select="[content]">
+    
+        </ng-content>
+    </ng-template>
+    <ng-template *ngIf="footer" pTemplate="footer">
+        <ng-content spellcheck="true" select="[footer]">
+            
+        </ng-content>
+    </ng-template>
+</p-panel>

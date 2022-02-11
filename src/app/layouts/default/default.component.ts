@@ -1,4 +1,4 @@
-import { Observable } from 'rxjs';
+import { distinctUntilChanged, Observable } from 'rxjs';
 import { Keys } from '@app/utilities';
 import { select, Store } from '@ngrx/store';
 import { DefaultState } from '@store/states';
@@ -7,7 +7,7 @@ import { PrimeNGConfig } from 'primeng/api';
 import { DefaultActions } from '@store/actions';
 import { selectDefaultState } from '@store/selectors';
 import { AppLoggerService, AppStorageService } from '@services/index';
-import { Header, IDefaultClassProperties, Menu, Sidebar } from '@models/index';
+import { Header, IDefaultClassProperties, Menu, PageConfigurations, Sidebar } from '@models/index';
 import { ChangeDetectionStrategy, ChangeDetectorRef, Component, EventEmitter, OnDestroy, OnInit } from '@angular/core';
 
 @Component({
@@ -35,7 +35,7 @@ export class DefaultLayoutComponent implements IDefaultClassProperties, OnInit, 
   private _isOpen: boolean = false;
   isOpenChange: EventEmitter<boolean> = new EventEmitter<boolean>();
 
-  private _defaultState$: Observable<DefaultState> | undefined;
+  private _defaultState$: Observable<DefaultState | undefined> | undefined;
 
   constructor(private logger: AppLoggerService, private storage: AppStorageService,
     private store$: Store<AppState>, private changeDetectorRef: ChangeDetectorRef,
@@ -50,9 +50,9 @@ export class DefaultLayoutComponent implements IDefaultClassProperties, OnInit, 
   }
 
   afterNgOnInit(): void {
-    this._defaultState$?.subscribe(res => {
-      this.header = res.pageConfig?.header;
-      this.sidebar.menus = res.pageConfig?.menus;
+    this._defaultState$?.pipe(distinctUntilChanged()).subscribe(res => {
+      this.header = res?.pageConfig?.header;
+      this.sidebar.menus = res?.pageConfig?.menus;
       this.updateComChange();
     });
   }

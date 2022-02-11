@@ -1,5 +1,5 @@
 export class Utilities {
-
+    
     static getItemByIndex<T>(arr: Array<T>, index: number): T | null {
         for (const key in arr) {
             if (key as unknown == index) {
@@ -12,19 +12,19 @@ export class Utilities {
     static getParentElement(ele: any, selector: string) {
         let maxSearch = 20;
         let searchedEle = 0;
-        selector = selector.toLowerCase();      
+        selector = selector.toLowerCase();
         while (ele && ele.parentNode) {
             let _ele = ele.parentNode.closest(selector) as HTMLElement;
-          if (_ele) {
-            return _ele;
-          }
-          searchedEle++;
-          if (searchedEle >= maxSearch) {
-            break;
-          }
+            if (_ele) {
+                return _ele;
+            }
+            searchedEle++;
+            if (searchedEle >= maxSearch) {
+                break;
+            }
         }
         return null;
-      }
+    }
 
     static updateObject(obj: { [x: string]: any; }, key: string, newVal: any) {
         for (var i in obj) {

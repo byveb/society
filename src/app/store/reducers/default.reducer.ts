@@ -10,7 +10,16 @@ const initialState: DefaultState = {
 
 const reducer = createReducer(
     initialState,
-    on(DefaultActions.setPageConfig, (state, { pageConfig }) => ({ ...state, pageConfig: pageConfig })));
+    on(DefaultActions.setPageConfig, (state, { pageConfig }) => ({
+        ...state, pageConfig: {
+            ...state.pageConfig,
+            header: pageConfig.header,
+            menus: pageConfig.menus,
+            updateOn: pageConfig.updateOn,
+            version: pageConfig.version,
+            widgets: pageConfig.widgets
+        }
+    })));
 
 
 export function defaultReducer(

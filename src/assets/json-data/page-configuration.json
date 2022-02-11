@@ -1,6 +1,46 @@
 {
     "data": {
         "version": "0.0.1",
+        "widgets": {
+            "quickButtons": [
+                {
+                    "icon": "pi pi-money-bill",
+                    "label": "Add new expense",
+                    "link": "",
+                    "order": 0
+                },
+                {
+                    "icon": "pi pi-user-plus",
+                    "label": "Add new tenant",
+                    "link": "",
+                    "order": 0
+                },
+                {
+                    "icon": "pi pi-home",
+                    "label": "Add new property",
+                    "link": "",
+                    "order": 0
+                },
+                {
+                    "icon": "pi pi-download",
+                    "label": "Add new request",
+                    "link": "",
+                    "order": 0
+                },
+                {
+                    "icon": "pi pi-clock",
+                    "label": "Add new reminder",
+                    "link": "",
+                    "order": 0
+                },
+                {
+                    "icon": "pi pi-dollar",
+                    "label": "Add new income",
+                    "link": "",
+                    "order": 0
+                }
+            ]
+        },
         "header": {
             "controls": [
                 {

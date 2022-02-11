@@ -1,0 +1,10 @@
+<div class="grid quick-links">
+    <ng-container *ngFor="let item of items">
+        <div class="col-6 md:col-4 lg:col-4">
+            <a class="quick-link">
+                <i [classList]="item.icon"></i>
+                <span class="link-text" [innerText]="item.label"></span>
+            </a>
+        </div>
+    </ng-container>
+</div>

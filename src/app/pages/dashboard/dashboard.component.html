@@ -1,7 +1,26 @@
-<div class="bg-default px-4 py-2 mx-4">
+<div class="bg-default px-3 mx-3">
     <div class="grid">
-        <div class="col-12 md:col-12 lg:col-12">
-            
+        <div class="col-12 md:col-4 lg:col-4">
+            <society-panel [header]="true" styleClass="widget-panel header-bg-white">
+                <ng-container header>
+                    Quick Button
+                </ng-container>
+                <div content class="widget-panel-content widget-size-md">
+                    <widget-quick-buttons class="align-self-center" *ngIf="widgetButtons.length > 0"
+                        [items]="widgetButtons"></widget-quick-buttons>
+                </div>
+            </society-panel>
+        </div>
+
+        <div class="col-12 md:col-4 lg:col-4">
+            <society-panel [header]="true" styleClass="widget-panel header-bg-white">
+                <ng-container header>
+                    Maintenance
+                </ng-container>
+                <div content class="widget-panel-content widget-size-md">
+                    <widget-status class="align-self-center"></widget-status>
+                </div>
+            </society-panel>
         </div>
     </div>
 </div>

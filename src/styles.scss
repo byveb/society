@@ -26,9 +26,11 @@ body {
 breadcrumb,
 society-root,
 society-menu,
+society-panel,
 society-header,
 society-slidebar,
 society-breadcrumb,
+widget-quick-buttons,
 society-footer {
     display: block;
 }
@@ -89,6 +91,11 @@ society-sidebar {
     background-color: #eff3f8;
 }
 
+.font-default,
+.loggedin-user .p-avatar-lg .p-avatar-icon {
+    font-size: 1rem;
+}
+
 .border-radius-none {
     border-radius: 0;
 }
@@ -101,7 +108,7 @@ society-sidebar {
     z-index: 10;
     height: 90px;
     display: block;
-    margin: 0 13px;
+    margin: 0 8px;
     position: relative;
     border-top: 1px solid #dae2ec;
     border-bottom: 1px solid #dae2ec;
@@ -122,7 +129,7 @@ society-sidebar {
 .header-left_controls {
     & li {
         position: relative;
-        padding: 0.4rem 1rem;
+        padding: 0.4rem 1.2rem;
     }
 }
 
@@ -259,6 +266,24 @@ society-sidebar {
         left: 0;
         bottom: 0;
         height: 100%;
+    }
+}
+
+.widget-panel {
+    & .p-panel-header {
+        padding: 1rem;
+    }
+    &.header-bg-white {
+        & .p-panel-header {
+            color: #043d75;
+            background-color: white;
+        }
+    }
+    & .widget-panel-content {
+        display: flex;
+    }
+    & .widget-size-md {
+        min-height: 200px;
     }
 }
 

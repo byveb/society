@@ -1,7 +1,7 @@
-import { selectDefaultState, pageConfig, selectFeatureDefaultState } from "./default.selectors";
+import { selectDefaultState, selectFeatureDefaultState, selectWidgetsList } from "./default.selectors";
 
 export {
-    pageConfig,
+    selectWidgetsList,
     selectDefaultState,
     selectFeatureDefaultState
 }

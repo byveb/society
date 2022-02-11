@@ -1,3 +1,3 @@
 export declare type Params = {
-    [key: string]: any;
+    [key: string]: Map<string, any> | any;
 };

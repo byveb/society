@@ -1,5 +1,8 @@
+import {KnobModule} from 'primeng/knob';
 import { MenuModule } from 'primeng/menu';
 import { NgModule } from "@angular/core";
+import { ToastModule } from 'primeng/toast';
+import { PanelModule } from 'primeng/panel';
 import { BadgeModule } from 'primeng/badge';
 import { ButtonModule } from 'primeng/button';
 import { RippleModule } from "primeng/ripple";
@@ -10,22 +13,24 @@ import { SidebarModule } from 'primeng/sidebar';
 import { AccordionModule } from "primeng/accordion";
 import { PanelMenuModule } from 'primeng/panelmenu';
 import { BreadcrumbModule } from 'primeng/breadcrumb';
-import {ScrollPanelModule} from 'primeng/scrollpanel';
+import { ScrollPanelModule } from 'primeng/scrollpanel';
 import { AvatarGroupModule } from 'primeng/avatargroup';
 import { SplitButtonModule } from 'primeng/splitbutton';
 
 import en from "@angular/common/locales/en";
-import { registerLocaleData } from "@angular/common";
+import { CommonModule, registerLocaleData } from "@angular/common";
 
 registerLocaleData(en);
 
 
 @NgModule({
-    declarations: [
-    ],
-    providers: [
+    imports: [
+        KnobModule,
         MenuModule,
+        PanelModule,
         BadgeModule,
+        ToastModule,
+        CommonModule,
         AvatarModule,
         ButtonModule,
         RippleModule,
@@ -39,11 +44,12 @@ registerLocaleData(en);
         AvatarGroupModule,
         ScrollPanelModule
     ],
-    imports: [
-    ],
     exports: [
+        KnobModule,
         MenuModule,
+        ToastModule,
         BadgeModule,
+        PanelModule,
         ButtonModule,
         RippleModule,
         AvatarModule,

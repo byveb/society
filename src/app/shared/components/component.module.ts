@@ -18,17 +18,20 @@ import { BreadcrumbComponent } from './breadcrumb/breadcrumb.component';
 import { FileUploadComponent } from './file-upload/file-upload.component';
 import { ThirdPartyComponentsModule } from './third-party-components.module';
 import { UploadFilePreviewComponent } from './upload-file-preview/upload-file-preview.component';
-import { GridStackComponent, LoaderComponent } from '.';
+import { GridStackComponent, LoaderComponent, PanelComponent, ToastComponent } from '.';
 import { MenuComponent } from './menu/menu.component';
+import { WidgetsModule } from './widgets/widgets.module';
 
 @NgModule({
   declarations: [
+    NavComponent,
     MenuComponent,
     CardComponent,
-    NavComponent,
     NoteComponent,
     PetsComponent,
+    ToastComponent,
     ModalComponent,
+    PanelComponent,
     LoaderComponent,
     FilterComponent,
     SearchComponent,
@@ -46,10 +49,14 @@ import { MenuComponent } from './menu/menu.component';
   imports: [
     CommonModule,
     RouterModule,
+    WidgetsModule,
     ThirdPartyComponentsModule
   ],
   exports: [
+    WidgetsModule,
     MenuComponent,
+    PanelComponent,
+    ToastComponent,
     LoaderComponent,
     HeaderComponent,
     FooterComponent,
