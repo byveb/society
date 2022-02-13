@@ -4,9 +4,11 @@ import { RouterModule } from '@angular/router';
 import { StatusWidgetComponent, ListingsWidgetComponent, QuickButtonWidgetComponent, ComingFeaturesWidgetComponent } from '.';
 import { ThirdPartyComponentsModule } from '../third-party-components.module';
 import { FormsModule } from '@angular/forms';
+import { ChartsComponent } from '..';
 
 @NgModule({
   declarations: [
+    ChartsComponent,
     StatusWidgetComponent,
     ListingsWidgetComponent,
     QuickButtonWidgetComponent,
@@ -19,6 +21,7 @@ import { FormsModule } from '@angular/forms';
     ThirdPartyComponentsModule,
   ],
   exports: [
+    ChartsComponent,
     StatusWidgetComponent,
     ListingsWidgetComponent,
     QuickButtonWidgetComponent,

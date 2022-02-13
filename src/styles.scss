@@ -127,9 +127,17 @@ society-sidebar {
 
 .header-right_controls,
 .header-left_controls {
+    padding: 0.4rem 1.2rem;
     & li {
         position: relative;
-        padding: 0.4rem 1.2rem;
+    }
+}
+
+.user-profile {
+    padding: 0.25rem 0.5rem;
+    & .p-avatar {
+        width: 2.5rem;
+        height: 2.5rem;
     }
 }
 
@@ -206,7 +214,7 @@ society-sidebar {
 .cust-badge,
 [role="button"] .cust-badge {
     top: 0px;
-    right: 5px;
+    right: 10px;
     padding: 5px;
     width: 1.5rem;
     height: 1.5rem;
@@ -276,6 +284,7 @@ society-sidebar {
     &.header-bg-white {
         & .p-panel-header {
             color: #043d75;
+            font-weight: 600;
             background-color: white;
         }
     }
@@ -283,7 +292,7 @@ society-sidebar {
         display: flex;
     }
     & .widget-size-md {
-        min-height: 200px;
+        height: 200px;
     }
 }
 
@@ -346,7 +355,6 @@ society-sidebar {
 }
 
 @media (min-width: 1024px) and (max-width: 1200px) {
-    
 }
 
 @media (min-width: 1200px) {

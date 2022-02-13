@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'society-coming-features',
+  selector: 'widget-upcoming',
   templateUrl: './coming-features.component.html',
   styleUrls: ['./coming-features.component.scss']
 })

@@ -17,8 +17,19 @@
                 <ng-container header>
                     Maintenance
                 </ng-container>
-                <div content class="widget-panel-content widget-size-md">
-                    <widget-status class="align-self-center"></widget-status>
+                <div content class="widget-panel-content justify-content-center widget-size-md">
+                    <widget-charts class="align-self-center"></widget-charts>
+                </div>
+            </society-panel>
+        </div>
+
+        <div class="col-12 md:col-4 lg:col-4">
+            <society-panel [header]="true" styleClass="widget-panel header-bg-white">
+                <ng-container header>
+                    Ready to upgrade?
+                </ng-container>
+                <div content class="widget-panel-content justify-content-center widget-size-md">
+                    <widget-upcoming class="align-self-center"></widget-upcoming>
                 </div>
             </society-panel>
         </div>

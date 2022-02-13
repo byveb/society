@@ -1,12 +1,14 @@
 import { Injectable } from '@angular/core';
 import { Utilities } from '@app/utilities/utilities';
 import { environment } from 'environments/environment';
+import { AppLoggerService } from '..';
 
 const APP_PREFIX = environment.localStoreName;
 
 @Injectable()
 export class AppStorageService {
-  constructor() { }
+
+  constructor(private logger: AppLoggerService) { }
 
   static loadInitialState() {
     return Object.keys(localStorage).reduce((state: any, storageKey) => {
@@ -45,8 +47,18 @@ export class AppStorageService {
     localStorage.setItem(`${APP_PREFIX}${key}`, JSON.stringify(value));
   }
 
-  getItem(key: string) {
-    return JSON.parse(localStorage.getItem(`${APP_PREFIX}${key}`) || '{}');
+  getItem(key: string): any {
+    let _val = localStorage.getItem(`${APP_PREFIX}${key}`);
+    try {
+      _val = (_val) ? JSON.parse(_val || '{}') : _val;
+    } catch (err: any) {
+      this.logger.err(err.message, err, { "data": _val });
+    };
+    return _val;
+  }
+
+  getTypeItem<T>(key: string): T {
+    return JSON.parse(localStorage.getItem(`${APP_PREFIX}${key}`) || '{}') as T;
   }
 
   updateObjectItem(key: string, value: any) {

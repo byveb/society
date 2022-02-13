@@ -8,8 +8,10 @@ import { DashboardPageComponent } from "./dashboard/dashboard.component";
 import { MaintenancePageComponent } from "./maintenance/maintenance.component";
 import { TransactionsPageComponent } from "./transactions/transactions.component";
 import { PropertyUnitPageComponent } from "./property-unit/property-unit.component";
+import { CalendarComponent } from "./calendar/calendar.component";
 
 export {
+    CalendarComponent,
     ErrorPageComponent,
     StaffsPageComponent,
     ReportsPageComponent,

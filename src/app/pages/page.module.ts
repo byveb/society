@@ -3,10 +3,11 @@ import { CommonModule } from '@angular/common';
 import { ServiceModule } from '@services/service.module';
 import { LayoutsModule } from '@layouts/layout.module';
 import { ComponentsModule } from '@components/component.module';
-import { DashboardPageComponent, ErrorPageComponent, PropertyPageComponent, PropertyUnitPageComponent } from '.';
+import { CalendarComponent, DashboardPageComponent, ErrorPageComponent, PropertyPageComponent, PropertyUnitPageComponent } from '.';
 
 @NgModule({
   declarations: [
+    CalendarComponent,
     ErrorPageComponent,
     PropertyPageComponent,
     DashboardPageComponent,

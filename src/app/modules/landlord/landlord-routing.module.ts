@@ -1,13 +1,14 @@
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
 import { DefaultLayoutComponent } from "@layouts/index";
-import { ContactsPageComponent, DashboardPageComponent, ErrorPageComponent, ListingPageComponent, MaintenancePageComponent, PropertyPageComponent, PropertyUnitPageComponent, ReportsPageComponent, StaffsPageComponent, TransactionsPageComponent } from "@pages/index";
+import { CalendarComponent, ContactsPageComponent, DashboardPageComponent, ErrorPageComponent, ListingPageComponent, MaintenancePageComponent, PropertyPageComponent, PropertyUnitPageComponent, ReportsPageComponent, StaffsPageComponent, TransactionsPageComponent } from "@pages/index";
 
 const routes: Routes = [
     {
         path: '', component: DefaultLayoutComponent, children: [
             { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
             { path: 'staffs', component: StaffsPageComponent },
+            { path: 'calendar', component: CalendarComponent },
             { path: 'reports', component: ReportsPageComponent },
             { path: 'dashboard', component: DashboardPageComponent },
             { path: 'contacts/tenants', component: ContactsPageComponent },
@@ -23,10 +24,12 @@ const routes: Routes = [
             { path: 'accounting/balances', component: TransactionsPageComponent },
             { path: 'accounting/recurring', component: TransactionsPageComponent },
             { path: 'accounting/transactions', component: TransactionsPageComponent },
-            { path: '**', component: ErrorPageComponent, data: { module: "landloard", page: 'error', layout: 'default' } }
+            { path: 'error', component: ErrorPageComponent, data: { page: 'error', module: "landloard" } },
+            { path: '**', component: ErrorPageComponent, data: { module: "landloard", page: 'error-404', layout: 'default' } }
         ], data: { module: "landloard", layout: 'default', component: 'defaultlayoutcomponent' }
     },
-    { path: '**', component: ErrorPageComponent, data: { page: 'error', module: "landloard" } }
+    { path: 'error', component: ErrorPageComponent, data: { page: 'error', module: "landloard" } },
+    { path: '**', component: ErrorPageComponent, data: { page: 'error-404', module: "landloard" } }
 ];
 
 @NgModule({

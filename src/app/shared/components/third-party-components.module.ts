@@ -1,6 +1,7 @@
-import {KnobModule} from 'primeng/knob';
+import { KnobModule } from 'primeng/knob';
 import { MenuModule } from 'primeng/menu';
 import { NgModule } from "@angular/core";
+import { ChartModule } from 'primeng/chart';
 import { ToastModule } from 'primeng/toast';
 import { PanelModule } from 'primeng/panel';
 import { BadgeModule } from 'primeng/badge';
@@ -27,6 +28,7 @@ registerLocaleData(en);
     imports: [
         KnobModule,
         MenuModule,
+        ChartModule,
         PanelModule,
         BadgeModule,
         ToastModule,
@@ -47,6 +49,7 @@ registerLocaleData(en);
     exports: [
         KnobModule,
         MenuModule,
+        ChartModule,
         ToastModule,
         BadgeModule,
         PanelModule,

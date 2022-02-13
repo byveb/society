@@ -5,7 +5,7 @@ interface PageConfigurations {
     header: Header;
     updateOn: Date;
     version: string;
-    widgets: Widgets;
+    widgets: Widgets[];
 }
 
 export default PageConfigurations;

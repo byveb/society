@@ -1,12 +1,11 @@
 import { select, Store } from '@ngrx/store';
-import { AppState } from '@app/store/reducers';
 import { MenuItem } from '@app/shared/modules';
 import { WidgetQuickButton } from '@app/models';
 import { DefaultState } from '@app/store/states';
 import { distinctUntilChanged, Observable } from 'rxjs';
+import { selectDefaultState } from '@app/store/selectors';
 import { AppLoggerService, AppStorageService } from '@app/shared/services';
 import { ChangeDetectionStrategy, ChangeDetectorRef, Component, OnInit } from '@angular/core';
-import { selectDefaultState } from '@app/store/selectors';
 
 @Component({
   selector: 'page-dashboard',
@@ -32,7 +31,7 @@ export class DashboardPageComponent implements OnInit {
 
   afterNgOnInit(): void {
     this._defaultState$?.subscribe(res => {
-      this.widgetButtons = res.pageConfig?.widgets.quickButtons ?? [];
+      this.widgetButtons = (res.pageConfig?.widgets.find(x => x.type == "quickbuttons")?.control as Array<WidgetQuickButton>) ?? [];
       this.updateComponent();
     });
   }
